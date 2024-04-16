@@ -5,11 +5,11 @@ namespace App\Infrastructure\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AccountModel extends Model
+class TransactionModel extends Model
 {
     use HasFactory;
 
-    protected $table = "accounts";
+    protected $table = "transactions";
 
     protected $primaryKey = 'id';
 
@@ -17,6 +17,10 @@ class AccountModel extends Model
 
     protected $fillable = [
         'id',
+        'account_id',
+        'payment_method',
+        'rate',
         'value',
+        'amount',
     ];
 }
